@@ -35,5 +35,5 @@ module.exports = {
       jsx: true,
     },
   },
-  ignorePatterns: ["node_modules/"],
+  ignorePatterns: ["temp.js", "node_modules/"],
 };
