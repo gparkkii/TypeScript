@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 const url = "https://jsonplaceholder.typicode.com/users/1";
-
 const username = document.querySelector("#username");
 const email = document.querySelector("#email");
 const address = document.querySelector("#address");
