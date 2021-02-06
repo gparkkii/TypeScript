@@ -28,4 +28,5 @@ function fetchUser() {
 
 fetchUser().then(function (response) {
   response.address.city;
+  response.address.street;
 });
