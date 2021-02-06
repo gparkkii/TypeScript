@@ -5,6 +5,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    jest: true,
   },
   extends: [
     "plugin:@typescript-eslint/eslint-recommended",
@@ -26,6 +27,8 @@ module.exports = {
         endOfLine: "lf",
       },
     ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "prefer-const": "off",
   },
   parserOptions: {
     parser: "@typescript-eslint/parser",
