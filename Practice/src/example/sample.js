@@ -17,3 +17,20 @@ const Sums = function () {
   printSum(10, 20);
 };
 new Sums();
+
+// function PersonofClass(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   console.log('생성되었습니다.');
+// }
+// const john = new PersonofClass('JohnPark', 100);
+// console.log(john);
+
+class PersonofClass {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+const John = new PersonofClass("JohnPark", 100);
+console.log(John);
