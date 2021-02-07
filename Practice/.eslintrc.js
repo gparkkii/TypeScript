@@ -15,20 +15,14 @@ module.exports = {
     "prettier/prettier": [
       "error",
       {
-        // quotes: [
-        //   1,
-        //   "single",
-        //   {
-        //     "avoidEscape": true,
-        //     "allowTemplateLiterals": true,
-        //   },
-        // ],
-        quotes: [2, ["backtick", "single"]],
+        singleQuote: true,
         semi: true,
         useTabs: false,
         tabWidth: 2,
         printWidth: 80,
         bracketSpacing: true,
+        avoidEscape: true,
+        allowTemplateLiterals: true,
         arrowParens: "avoid",
         trailingComma: "all",
         endOfLine: "lf",
@@ -38,6 +32,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "no-unused-vars": 0,
     "prefer-const": 1,
+    eqeqeq: 1,
   },
   parserOptions: {
     parser: "@typescript-eslint/parser",

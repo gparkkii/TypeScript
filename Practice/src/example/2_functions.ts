@@ -27,4 +27,4 @@ ifaddmore(1, 2);
 function optionTest(a?: string) {
   // ...
 }
-optionTest("abomasum");
+optionTest('abomasum');
