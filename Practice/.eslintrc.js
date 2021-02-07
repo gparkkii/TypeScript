@@ -15,7 +15,14 @@ module.exports = {
     "prettier/prettier": [
       "error",
       {
-        singleQuote: true,
+        quotes: [
+          1,
+          "single",
+          {
+            avoidEscape: true,
+            allowTemplateLiterals: true,
+          },
+        ],
         semi: true,
         useTabs: false,
         tabWidth: 2,
