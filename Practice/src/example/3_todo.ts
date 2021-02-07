@@ -1,4 +1,3 @@
-/* eslint-disable prefer-const */
 // type Todo = {
 //   id: number;
 //   title: string;

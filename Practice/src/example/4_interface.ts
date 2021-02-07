@@ -1,5 +1,3 @@
-/* eslint-disable prefer-const */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 // 인터페이스란 상호간의 약속을 나타낸다
 interface User {
   name: string;
