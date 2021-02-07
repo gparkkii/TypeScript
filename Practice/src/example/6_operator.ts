@@ -1,3 +1,4 @@
+// ====================== Union Type ======================= //
 // Union Type : | or 연산자로 여러개의 타입이 사용 가능해진다.
 function logMessage(value: string | number) {
   console.log(value);
@@ -33,3 +34,17 @@ function askSomeone(someone: first_developer | second_developer) {
   someone.name; // (o)
   // someone.skill; (x)
 }
+askSomeone({ name: '디벨로퍼', skill: '웹개발' });
+askSomeone({ name: '캡틴', age: 100 });
+
+// ======================InterSection Type ======================= //
+// let impossibletype = string & number & boolean;
+function askSomeone2(someone: first_developer & second_developer) {
+  // 여러개의 유니온 타입을 쓰게 될 때는 보장된(두개의 유니온 타입이 모두 다 가지고 있는) 속성만 사용하게 된다.
+  someone.name; // (o)
+  someone.skill; // (o)
+  someone.age; // (o)
+  console.log(someone.name, someone.skill, someone.age);
+}
+// askSomeone2({ name: '디벨로퍼', skill: '웹개발' }) (x)
+askSomeone2({ name: '디벨로퍼', skill: '웹개발', age: 100 });

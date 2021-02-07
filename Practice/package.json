@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "doc": "jsdoc -c jsdoc.json",
-    "build": "tsc"
+    "build": "tsc",
+    "precommit": "lint-staged"
   },
   "author": "Ji Yeon Park",
   "license": "MIT",
@@ -31,8 +32,9 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint . --fix",
-      "prettier --write"
+      "eslint --fix",
+      "prettier --write",
+      "git add"
     ]
   },
   "husky": {
