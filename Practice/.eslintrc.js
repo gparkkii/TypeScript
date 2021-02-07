@@ -1,5 +1,4 @@
 // .eslintrc.js
-
 module.exports = {
   root: true,
   env: {
@@ -27,8 +26,9 @@ module.exports = {
         endOfLine: "lf",
       },
     ],
+    // '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
     "@typescript-eslint/no-explicit-any": "off",
-    "prefer-const": "off",
+    "no-unused-vars": 0,
   },
   parserOptions: {
     parser: "@typescript-eslint/parser",
