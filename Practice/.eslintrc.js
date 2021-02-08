@@ -30,8 +30,9 @@ module.exports = {
     ],
     // '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "prefer-const": "off",
     "no-unused-vars": 0,
-    "prefer-const": 1,
     eqeqeq: 1,
   },
   parserOptions: {

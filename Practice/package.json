@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "doc": "jsdoc -c jsdoc.json",
-    "build": "tsc",
+    "transpile": "tsc",
     "precommit": "lint-staged"
   },
   "author": "Ji Yeon Park",
