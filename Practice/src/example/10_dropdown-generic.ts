@@ -22,7 +22,7 @@
 // ];
 
 // function createDropdownItem(
-//   item: 
+//   item:
 //   | Email
 //   | ProductNumber
 //   ) {
@@ -63,11 +63,7 @@ const numberOfProducts: generics<number>[] = [
   { value: 3, selected: false },
 ];
 
-function createDropdownItem(
-  item: 
-  | generics<string>
-  | generics<number>
-  ) {
+function createDropdownItem(item: generics<string> | generics<number>) {
   const option = document.createElement('option');
   option.value = item.value.toString();
   option.innerText = item.value.toString();
@@ -78,17 +74,33 @@ function createDropdownItem(
 // NOTE: 이메일 드롭 다운 아이템 추가
 emails.forEach(function (email) {
   const item = createDropdownItem(email);
-  const selectTag = document.querySelector('#email-dropdown');
-  selectTag.appendChild(item);
+  // const selectTag = document.querySelector('#email-dropdown');
+  // selectTag.appendChild(item);
 });
-
 
 // 타입 제한하기
 interface LengthType {
   length: number;
 }
-function logTextLength<T extends LengthType>(text:T):T {
+function logTextLength<T extends LengthType>(text: T): T {
   text.length;
   return text;
 }
-logTextLength('amb')
+logTextLength<string>('amb');
+
+// 제너릭 타입제한 by keyof
+interface ShoppingItems {
+  name: string;
+  price: number;
+  stock: number;
+}
+// 쇼핑 아이템 중 한가지의 타입만 가질 수 있다.
+function getShoppingItemOption<T extends keyof ShoppingItems>(
+  itemOption: T,
+): T {
+  return itemOption;
+}
+// getShoppingItemOption(10);
+// getShoppingItemOption<string>('a');
+getShoppingItemOption('name');
+getShoppingItemOption('price');
